@@ -6,8 +6,8 @@ export declare class MessageService {
     getAllChats(): Promise<Message[]>;
     updateChat(chatId: string, content: string, role: string): Promise<{
         id: string;
-        chatId: string;
         content: string;
+        chatId: string;
         role: string;
         timestamp: Date;
     }>;

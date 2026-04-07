@@ -6,6 +6,7 @@ import MarkdownIt from 'markdown-it'
 import MarkdownItLinkAttributes from 'markdown-it-link-attributes'
 import { useUser } from '@/context/userContext'
 import { useChat } from '@/context/chatContext'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function handleName(userName: string) {
   const ind = userName.indexOf(' ')
@@ -71,16 +72,13 @@ export default function ChatArea() {
       const data: { id: string; chatTitle: string; userId: string; createdAt: Date; messages: { id: string; chatId: string; content: string; role: string; timestamp: Date }[] }[] =
         await response.json()
 
-      setChatId(data[0].id)
+      if (data && data.length > 0) {
+        setChatId(data[0].id)
 
-      // console.log(data)
-      // console.log(data[0].messages)
-      // const texts = data[0].messages.map((msg: any) => ({ role: msg.role, content: msg.content }))
-      if (data.length > 0 && data[0].messages && data[0].messages.length > 0) {
-        const texts = data[0].messages.map((msg) => ({ role: msg.role, content: msg.content }))
-        console.log(texts)
-
-        setMessages(texts)
+        if (data[0].messages && data[0].messages.length > 0) {
+          const texts = data[0].messages.map((msg) => ({ role: msg.role, content: msg.content }))
+          setMessages(texts)
+        }
       }
     } catch (error) {
       console.error('Error in Chat:', error)
@@ -214,29 +212,43 @@ export default function ChatArea() {
   }
 
   return (
-    <div className="h-[90.5vh] flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-xl">
+    <div className="h-[90.5vh] flex flex-col bg-gradient-to-b from-slate-900 via-slate-900 to-indigo-950 rounded-lg shadow-2xl border border-white/5 overflow-hidden">
       {/* Chat Messages */}
-      <div ref={chatContainerRef} className="flex-1 overflow-y-auto  p-4 space-y-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent">
-        {messages.map((msg, index) => (
-          <div key={index} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-[80%] p-3 rounded-lg ${msg.role === 'user' ? 'bg-blue-600 text-white' : 'bg-gray-700 text-gray-100'}`}>
-              <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: md.render(msg.content) }} />
-            </div>
-          </div>
-        ))}
+      <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 space-y-6 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+        <AnimatePresence initial={false}>
+          {messages.map((msg, index) => (
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, y: 10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
+              <div 
+                className={`max-w-[80%] p-4 rounded-2xl ${
+                  msg.role === 'user' 
+                    ? 'bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-md rounded-tr-sm' 
+                    : 'bg-white/5 backdrop-blur-md border border-white/10 text-slate-200 shadow-sm rounded-tl-sm'
+                }`}
+              >
+                <div className="prose prose-invert prose-p:leading-relaxed prose-pre:bg-black/20 prose-pre:border prose-pre:border-white/10 max-w-none" dangerouslySetInnerHTML={{ __html: md.render(msg.content) }} />
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
 
       {/* Input Area */}
-      <div className="p-4 bg-gray-800 border-t border-gray-700">
-        <div className="flex items-end gap-2 bg-gray-700 rounded-lg p-2">
+      <div className="p-4 bg-slate-900/50 backdrop-blur-xl border-t border-white/10">
+        <div className="flex items-end gap-3 bg-white/5 border border-white/10 rounded-2xl p-2 focus-within:ring-2 focus-within:ring-indigo-500/50 transition-all duration-300">
           <textarea
             ref={textAreaRef}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             onInput={handleTextAreaInput}
-            placeholder="Type your message..."
-            className="flex-1 bg-transparent text-gray-100 placeholder-gray-400 resize-none max-h-32 p-2 focus:outline-none"
+            placeholder="How are you feeling today?"
+            className="flex-1 bg-transparent text-slate-100 placeholder-slate-400 resize-none max-h-32 p-2 focus:outline-none"
             rows={1}
           />
           <button
@@ -244,7 +256,7 @@ export default function ChatArea() {
               console.log('sending message')
               sendMessage()
             }}
-            className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="p-3 bg-indigo-500 text-white rounded-xl hover:bg-indigo-400 transition-colors shadow-lg shadow-indigo-500/20 active:scale-95"
           >
             <Send className="h-5 w-5" />
           </button>
