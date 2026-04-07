@@ -40,4 +40,162 @@ A self-care routine is essential for maintaining good mental health. It involves
 - **Emotional:** Journaling, talking to a supportive friend, taking time to relax.
 - **Mental:** Engaging in hobbies, reading, disconnecting from screens, setting boundaries.
 
-*Note: I am a mental health bot. If you are experiencing a crisis, please call emergency services or a dedicated mental health crisis line immediately.*
+
+
+# Mental Health Coping Strategies and Facts
+
+---
+
+## 🧘 Progressive Muscle Relaxation (PMR)
+
+Progressive Muscle Relaxation is a technique that helps reduce physical tension and stress by systematically tensing and relaxing muscle groups.
+
+### Steps:
+- Start with your feet and tense the muscles for 5 seconds.
+- Release the tension and notice the relaxation.
+- Move upward through your body (legs, abdomen, arms, shoulders, face).
+- Focus on the difference between tension and relaxation.
+- Breathe slowly while doing this.
+
+---
+
+## 🌿 Mindfulness Meditation
+
+Mindfulness meditation involves focusing your attention on the present moment without judgment.
+
+### Steps:
+- Sit comfortably and close your eyes.
+- Focus on your breathing.
+- Notice thoughts as they arise, but do not engage with them.
+- Gently bring your attention back to your breath.
+- Practice for 5–10 minutes daily.
+
+### Benefits:
+- Reduces stress
+- Improves focus
+- Enhances emotional regulation
+
+---
+
+## 😰 Panic Attack Facts
+
+A panic attack is a sudden episode of intense fear.
+
+### Common Symptoms:
+- Rapid heartbeat
+- Sweating
+- Shortness of breath
+- Feeling of losing control
+- Chest discomfort
+
+### What Helps:
+- Slow breathing techniques
+- Grounding exercises
+- Reminding yourself that it will pass
+
+---
+
+## 💤 Sleep Hygiene
+
+Good sleep hygiene improves sleep quality and mental health.
+
+### Tips:
+- Maintain a consistent sleep schedule
+- Avoid screens before bedtime
+- Keep your room cool and dark
+- Avoid caffeine late in the day
+- Develop a relaxing bedtime routine
+
+---
+
+## 🧠 Cognitive Distortions
+
+Cognitive distortions are negative thinking patterns.
+
+### Examples:
+- **All-or-nothing thinking:** Seeing things as black or white  
+- **Overgeneralization:** One bad event = everything is bad  
+- **Catastrophizing:** Expecting the worst  
+- **Mind reading:** Assuming others think negatively about you  
+
+### How to Manage:
+- Challenge negative thoughts  
+- Replace them with balanced thinking  
+
+---
+
+## 🧍 Building Healthy Habits
+
+Creating habits helps long-term mental well-being.
+
+### Tips:
+- Start small (e.g., 5-minute walk)
+- Be consistent
+- Track progress
+- Reward yourself
+- Be patient
+
+---
+
+## 🗣️ Talking to Someone
+
+Talking helps reduce emotional burden.
+
+### Options:
+- Friends or family
+- Therapists or counselors
+- Support groups
+
+### Benefits:
+- Emotional release
+- New perspectives
+- Feeling supported
+
+---
+
+## 🏃 Exercise and Mental Health
+
+Physical activity improves mental health.
+
+### Benefits:
+- Releases endorphins (feel-good hormones)
+- Reduces stress and anxiety
+- Improves sleep
+- Boosts self-esteem
+
+### Examples:
+- Walking
+- Yoga
+- Running
+- Stretching
+
+---
+
+## 📵 Digital Detox
+
+Reducing screen time improves mental clarity.
+
+### Tips:
+- Set screen time limits
+- Take breaks from social media
+- Avoid phone before sleep
+- Spend time offline (reading, nature)
+
+---
+
+## ❤️ Self-Compassion
+
+Self-compassion means treating yourself with kindness.
+
+### How to Practice:
+- Avoid harsh self-criticism
+- Speak to yourself kindly
+- Accept imperfections
+- Recognize that struggle is human
+
+---
+
+## ⚠️ Note
+
+*This is a mental health support dataset. It is not a substitute for professional help. If you are experiencing a crisis, please contact emergency services or a mental health helpline immediately.*
+
